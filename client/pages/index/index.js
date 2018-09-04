@@ -7,7 +7,7 @@ Page({
     data: {
         userInfo: {},
         logged: false,
-        takeSession: false,
+        takeSession: true,
         requestResult: ''
     },
 
@@ -61,6 +61,7 @@ Page({
         var that = this
         var options = {
             url: config.service.requestUrl,
+            method: 'GET',
             login: true,
             success (result) {
                 util.showSuccess('请求成功完成')
